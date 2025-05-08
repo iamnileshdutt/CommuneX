@@ -1,0 +1,89 @@
+.right-sidebar {
+  position: fixed;
+  top: 70px; /* assumes fixed navbar ~50px + spacing */
+  right: 0;
+  width: 300px;
+  height: calc(100vh - 70px); /* fills full height minus navbar */
+  overflow-y: auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+/* Widget container styles */
+.widget,
+.widget-tags {
+  margin: 20px 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05), -3px -3px 10px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Widget headers */
+.widget h4,
+.widget-tags h4 {
+  margin: 0;
+  padding: 15px;
+  font-size: 13px;
+  border-bottom: 1px solid #e3e6e8;
+}
+
+.widget h4 {
+  background-color: #fbf3d5;
+  border: 1px solid #f1e5bc;
+}
+
+.widget-tags h4 {
+  background-color: #f8f9f9;
+  border: 1px solid #e3e6e8;
+}
+
+/* Content inside widgets */
+.right-sidebar-div-1 {
+  background-color: #fdf7e2;
+  padding: 15px;
+  border: 1px solid #f1e5bc;
+  border-top: none;
+}
+
+.right-sidebar-div-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.right-sidebar-div-2 p {
+  margin: 0;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+/* Tags styling */
+.widget-tags-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #e3e6e8;
+  border-top: none;
+  background-color: #f8f9f9;
+}
+
+.widget-tags-div p {
+  padding: 5px 8px;
+  background-color: #e1ecf4;
+  color: #39739d;
+  border-radius: 3px;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 1020px) {
+  .right-sidebar {
+    display: none;
+  }
+}

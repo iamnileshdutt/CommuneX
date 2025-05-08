@@ -1,0 +1,66 @@
+.left-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 164px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  font-size: 13px;
+  transition: box-shadow 0.1s ease-in-out;
+  z-index: 11;
+  overflow-y: auto;
+}
+
+.nav-btn {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.side-nav {
+  margin-top: 70px; /* assumes top navbar height ~50px + margin */
+  padding: 20px 0;
+}
+
+.side-nav-div {
+  padding: 10px 0;
+}
+
+.side-nav-div div {
+  padding-left: 10px;
+}
+
+.side-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 0 8px 10px;
+  text-decoration: none;
+  color: #3a3a3a;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.side-nav-links:hover {
+  color: #000;
+  background-color: #f2f2f2;
+}
+
+.active {
+  font-weight: bold;
+  color: #000;
+  background-color: #e1e1e1;
+  border-right: 3px solid #ef8236;
+}
+
+/* Static sidebar - no transform for small screens */
+@media screen and (max-width: 760px) {
+  .left-sidebar {
+    position: fixed; /* Still fixed to be always visible */
+    transform: none; /* Remove sliding effect */
+    z-index: 11;
+  }
+}

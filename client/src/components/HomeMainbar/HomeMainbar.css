@@ -1,0 +1,119 @@
+.main-bar {
+  max-width: 1200px;
+  margin: 100px auto 25px auto; /* 100px top margin to avoid overlap with fixed navbar */
+  padding: 0 12px;
+  box-sizing: border-box;
+  width: calc(100% - 200px); /* leaves space if sidebar is 164px + some padding */
+}
+
+.main-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.main-bar-header h1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.main-bar-header .ask-btn {
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #009dff;
+  color: white;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.main-bar-header .ask-btn:hover {
+  background-color: #0086d8;
+}
+
+.display-question-container {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #fdf7e2;
+  border-bottom: 1px solid #edeff0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.display-votes-ans {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.display-votes-ans p {
+  margin: 0;
+}
+
+.display-question-details {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.question-title-link {
+  color: #037ecb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.question-title-link:hover {
+  color: #009dff;
+}
+
+.display-tags-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.display-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.display-tags p {
+  margin: 0;
+  padding: 4px 6px;
+  font-size: 13px;
+  background-color: #edeff0;
+  color: #39739d;
+  border-radius: 3px;
+}
+
+.display-time {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Responsive Behavior */
+@media screen and (max-width: 1020px) {
+  .main-bar {
+    width: 100%;
+    margin: 90px 0 25px 0;
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .display-votes-ans {
+    padding: 0 10px;
+  }
+
+  .main-bar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
